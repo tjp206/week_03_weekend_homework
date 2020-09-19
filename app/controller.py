@@ -5,4 +5,7 @@ from app.models.game import *
 
 @app.route('/')
 def index():
-    return render_template('index.html', title='game_name')
+    return render_template('index.html')
+
+# @app.route('/next-player', methods=['POST'])
+# def next_player():
