@@ -7,5 +7,7 @@ from app.models.game import *
 def index():
     return render_template('index.html')
 
-# @app.route('/next-player', methods=['POST'])
-# def next_player():
+@app.route('/rock/scissors', methods=['POST'])
+def winner():
+    game.get_winner()
+    return render_template('outcome.html')
